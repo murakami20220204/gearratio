@@ -1,0 +1,53 @@
+﻿body {
+	background-color: white;
+	color: black;
+}
+button {
+	width: 100%;
+}
+canvas {
+	border: outset;
+	float: left;
+}
+caption {
+	background-color: darkblue;
+	color: white;
+}
+.clear {
+	clear: both;
+}
+form {
+	border: outset;
+	width: fit-content;
+}
+input {
+	width: 5em;
+}
+nav li {
+	display: inline;
+}
+nav ul {
+	padding: 0;
+}
+section div {
+	float: left;
+	margin: 2pt;
+}
+table {
+	border: inset;
+}
+#template {
+	visibility: collapse;
+}
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: black;
+		color: white;
+	}
+	a {
+		color: skyblue;
+	}
+	a:visited {
+		color: pink;
+	}
+}

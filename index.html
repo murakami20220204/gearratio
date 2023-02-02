@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="index.css" />
+	<title>Gear Ratio Application</title>
+</head>
+<body>
+	<script src="index.js"></script>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="index.html">English</a></li>
+				<li><a href="index-ja.html">日本語</a></li>
+			</ul>
+		</nav>
+		<h1>Gear Ratio Application</h1>
+	</header>
+	<hr />
+	<section>
+		<div>
+			<canvas id="canvas" width="1" height="1">Canvas not be supported.</canvas>
+		</div>
+		<div>
+			<form>
+				<table>
+					<caption>Transmission Settings</caption>
+					<tbody>
+						<tr>
+							<td><label for="gears">Number of gears:</label></td>
+							<td><input id="gears" min="1" step="1" type="number" value="5" /></td>
+						</tr>
+						<tr>
+							<td><label for="final">Final ratio:</label></td>
+							<td><input id="final" min="0" step="0.1" type="number" value="5" /></td>
+						</tr>
+					</tbody>
+					<tbody id="transmission"></tbody>
+					<tbody>
+						<tr id="template">
+							<td><label>Gear ratio <span>#</span>:</label></td>
+							<td><input min="0" step="0.1" type="number" /></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+		<div>
+			<form>
+				<table>
+					<caption>Figure Settings</caption>
+					<tbody>
+						<tr>
+							<td><label for="canvas-width">Figure width:</label></td>
+							<td><input id="canvas-width" min="0" step="100" type="number" value="500" /></td>
+						</tr>
+						<tr>
+							<td><label for="height">Figure height:</label></td>
+							<td><input id="canvas-height" min="0" step="100" type="number" value="500" /></td>
+						</tr>
+						<tr>
+							<td><label for="rotation-scale">Rotation scale:</label></td>
+							<td><input id="rotation-scale" min="0" step="100" type="number" value="11000" /></td>
+							<td><label for="rotation-scale">rpm</label></td>
+						</tr>
+						<tr>
+							<td><label for="rotation-step">Rotation step:</label></td>
+							<td><input id="rotation-step" min="0" step="100" type="number" value="1000" /></td>
+							<td><label for="rotation-step">rpm</label></td>
+						</tr>
+						<tr>
+							<td><label for="speed-scale">Speed scale:</label></td>
+							<td><input id="speed-scale" min="0" step="10" type="number" value="350" /></td>
+							<td><label class="speed-unit" for="speed-scale">km/h</label></td>
+						</tr>
+						<tr>
+							<td><label for="speed-step">Speed step:</label></td>
+							<td><input id="speed-step" min="0" step="10" type="number" value="50" /></td>
+							<td><label class="speed-unit" for="speed-step">km/h</label></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+		<div>
+			<form>
+				<table>
+					<caption>Engine Settings</caption>
+					<tbody>
+						<tr>
+							<td><label for="rotation-max">Maximum rotation:</label></td>
+							<td><input id="rotation-max" min="0" step="100" type="number" value="10000" /></td>
+							<td><label for="rotation-max">rpm</label></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+		<div>
+			<form>
+				<table>
+					<caption>Generator</caption>
+					<tbody>
+						<tr>
+							<td><label for="auto-pivot">Pivot gear:</label></td>
+							<td><input id="auto-pivot" min="1" step="1" type="number" value="5" /></td>
+						</tr>
+						<tr>
+							<td><label for="auto-rotation">Shift rotation:</label></td>
+							<td><input id="auto-rotation" min="0" step="100" type="number" value="7000" /></td>
+							<td><label for="auto-rotation">rpm</label></td>
+						</tr>
+						<tr>
+							<td><label for="auto-step">Rotation step:</label></td>
+							<td><input id="auto-step" step="100" type="number" value="0" /></td>
+							<td><label for="auto-step">rpm</label></td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td colspan="3"><button id="auto" type="button" value="">Generate</button></td>
+						</tr>
+					</tfoot>
+				</table>
+			</form>
+		</div>
+		<div>
+			<form>
+				<table>
+					<caption>Preferences</caption>
+					<tbody>
+						<tr>
+							<td><label for="speed-factor">Speed constant:</label></td>
+							<td><input id="speed-factor" min="0" step="0.01" type="number" value="0.12" /></td>
+						</tr>
+						<tr>
+							<td><label for="speed-unit">Speed unit:</label></td>
+							<td>
+								<select id="speed-unit">
+									<option value="1" selected="">km/h</option>
+									<option value="1.609344">mph</option>
+								</select>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+	</section>
+	<div class="clear"></div>
+	<hr />
+	<footer>
+		<small>Copyright © 2023 Taichi Murakami. All rights reserved.</small>
+	</footer>
+</body>
+</html>
